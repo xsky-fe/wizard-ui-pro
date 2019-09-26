@@ -2,7 +2,6 @@
   "name": "wizard-ui-pro",
   "version": "0.0.1",
   "description": "use wizard ui components",
-  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "build": "webpack --mode production",

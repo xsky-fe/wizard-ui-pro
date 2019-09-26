@@ -7,7 +7,7 @@ const App = () => {
     <React.Fragment>
       <Badge count="关闭" status="default" />
       <Icon type="os-search-role" />
-      <UsageBar percent="0.16" />
+      <UsageBar percent={0.16} />
     </React.Fragment>
   )
 }

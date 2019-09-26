@@ -1,3 +1,4 @@
+/// <reference path="../node_modules/@types/webpack-env/index.d.ts" />
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -8,4 +9,4 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
-module.hot.accept();
+module.hot && module.hot.accept();

@@ -1,0 +1,11 @@
+.Dashboard {
+  display: flex;
+  &__sidebar {
+    background-color: rgb(45, 52, 84);
+    width: 256px;
+    min-height: 100vh;
+    .Navigation__item a {
+      display: block;
+    }
+  }
+}

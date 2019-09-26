@@ -1,15 +1,18 @@
 import React from 'react';
-import { Badge, Icon, UsageBar } from 'wizard-ui';
 import 'wizard-ui/lib/style/index.scss';
+import SideBar from './components/Sidebar';
+import Content from './components/Content';
+import Topbar from './components/Topbar';
+import './style.scss';
 
-const App = () => {
-  return (
-    <React.Fragment>
-      <Badge count="关闭" status="default" />
-      <Icon type="os-search-role" />
-      <UsageBar percent={0.16} />
-    </React.Fragment>
-  )
-}
-
-export default App;
+export default () => (
+  <div className="Dashboard">
+    <aside className="Dashboard__sidebar">
+      <SideBar />
+    </aside>
+    <section className="Dashboard__main">
+      <Topbar/>
+      <Content/>
+    </section>
+  </div>
+)

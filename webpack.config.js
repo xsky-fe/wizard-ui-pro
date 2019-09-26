@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -36,12 +35,14 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/),
-    new LodashModuleReplacementPlugin,
+    // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
+    // You can remove this if you don't use Moment.js:
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
   devServer: {
     contentBase: './dist',
     port: 8080,
     hot: true
-  }
-};
+  },
+  devtool: 'source-map'
+}

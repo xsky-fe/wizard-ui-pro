@@ -5,14 +5,18 @@ import Content from './components/Content';
 import Topbar from './components/Topbar';
 import './style.scss';
 
-export default () => (
-  <div className="Dashboard">
-    <aside className="Dashboard__sidebar">
-      <SideBar />
-    </aside>
-    <section className="Dashboard__main">
-      <Topbar/>
-      <Content/>
-    </section>
-  </div>
-)
+export default () => {
+  const [toggle, setToggle] = React.useState(false);
+  return (
+    <div className="Dashboard">
+      <aside className={`Dashboard__sidebar ${toggle ? 'collapsed' : ''}`}>
+        <div className="SideBar__logo">Logo</div>
+        <SideBar toggle={toggle}/>
+      </aside>
+      <section className="Dashboard__main">
+        <Topbar toggle={toggle} setToggle={setToggle}/>
+        <Content />
+      </section>
+    </div>
+  )
+}

@@ -4,7 +4,8 @@ import { Route } from 'react-router-dom';
 
 const ROUTE_MAP = [
   {
-    path: '/dashboard',
+    path: '/',
+    exact: true,
     name: 'Dashboard',
     component: () => <div>dashboard</div>
   },
@@ -17,7 +18,7 @@ const ROUTE_MAP = [
 export default () => (
   <div>
     {ROUTE_MAP.map(r => (
-      <Route exact={r.path === '/dashboard/'} key={r.path} path={r.path} component={r.component} />
+      <Route exact={r.exact} key={r.path} path={r.path} component={r.component} />
     ))}
   </div>
 )

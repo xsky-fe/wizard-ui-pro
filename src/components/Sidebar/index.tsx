@@ -12,7 +12,7 @@ const navs = {
     children: [
       {
         title: (
-          <Link to="/dashboard">
+          <Link to="/">
             <Icon type="overview" />
             概览
           </Link>
@@ -30,8 +30,12 @@ const navs = {
   }
 }
 
-export default () => {
+type Props = {
+  toggle: boolean
+}
+
+export default (props: Props) => {
   return (
-    <Navigation navGroups={navs} />
+    <Navigation navGroups={navs} toggled={props.toggle}/>
   )
 }

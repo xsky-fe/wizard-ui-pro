@@ -1,0 +1,44 @@
+{
+  "name": "wizard-ui-pro",
+  "version": "0.0.1",
+  "description": "use wizard ui components",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack --mode production",
+    "analyze": "source-map-explorer 'dist/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsky-fe/wizard-ui-pro.git"
+  },
+  "author": "xskyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xsky-fe/wizard-ui-pro/issues"
+  },
+  "homepage": "https://github.com/xsky-fe/wizard-ui-pro#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
+    "node-sass": "^4.12.0",
+    "react-hot-loader": "^4.11.1",
+    "sass-loader": "^7.1.0",
+    "source-map-explorer": "^2.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "wizard-ui": "^0.3.0-beta.0"
+  }
+}

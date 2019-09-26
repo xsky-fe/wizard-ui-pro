@@ -1,0 +1,9 @@
+node_modules/
+
+# ignore build file
+dist/*.js
+dist/*.map
+dist/*.woff*
+dist/*.eot
+dist/*.ttf
+dist/*.svg

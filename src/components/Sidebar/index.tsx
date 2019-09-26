@@ -1,15 +1,32 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import { Navigation } from 'wizard-ui';
+import { Navigation, Icon } from 'wizard-ui';
 
 const navs = {
   dashboard: {
-    title: <Link to="/dashboard">概览</Link>,
+    title: '概览',
     icon: 'overview',
   },
   list: {
-    title: <Link to="/list">列表</Link>,
-    icon: 'volume',
+    title: '导航栏一',
+    children: [
+      {
+        title: (
+          <Link to="/dashboard">
+            <Icon type="overview" />
+            概览
+          </Link>
+        ),
+      },
+      {
+        title: (
+          <Link to="/list">
+            <Icon type="volume" />
+            列表
+          </Link>
+        ),
+      }
+    ]
   }
 }
 

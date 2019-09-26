@@ -4,8 +4,14 @@
     background-color: rgb(45, 52, 84);
     width: 256px;
     min-height: 100vh;
-    .Navigation__item a {
-      display: block;
+    .Navigation__item {
+      .Navigation__link {
+        padding: 0;
+      }
+      a {
+        display: block;
+        padding-left: 20px;
+      }
     }
   }
 }

@@ -746,6 +746,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/history@*":
+  version "4.7.3"
+  resolved "https://registry.npmjs.org/@types/history/-/history-4.7.3.tgz#856c99cdc1551d22c22b18b5402719affec9839a"
+  integrity sha512-cS5owqtwzLN5kY+l+KgKdRJ/Cee8tlmQoGQuIE9tWnSmS3JMKzmxo2HIAk2wODMifGwO20d62xZQLYz+RLfXmw==
+
 "@types/lodash@^4.14.136":
   version "4.14.139"
   resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.139.tgz#b7b8a00d014a7debb29dc2dae4f91d3d3c6d5ab3"
@@ -821,6 +826,23 @@
   integrity sha512-HcPSAlpFRiFqJ647YfUgzpr0aeMrH2SXkGPsLjkiG53oDj1upRvArVt/yBWRY+aykOs7C44EtZ5puzesO/U7HA==
   dependencies:
     "@types/prop-types" "*"
+    "@types/react" "*"
+
+"@types/react-router-dom@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/@types/react-router-dom/-/react-router-dom-5.1.0.tgz#8baa84a7fa8c8e7797fb3650ca51f93038cb4caf"
+  integrity sha512-YCh8r71pL5p8qDwQf59IU13hFy/41fDQG/GeOI3y+xmD4o0w3vEPxE8uBe+dvOgMoDl0W1WUZsWH0pxc1mcZyQ==
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    "@types/react-router" "*"
+
+"@types/react-router@*":
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/@types/react-router/-/react-router-5.1.0.tgz#ebb47bb7fdc75741286b5fb5a82ba5b4d62518c8"
+  integrity sha512-XqxaIqG+LJTh9wsGpZCVQNOAQyEjXcfYRqoIXEFqxc49BKnmvJ5FLylsNUUCTckSffD468cOn4NJvxcWuLwiDw==
+  dependencies:
+    "@types/history" "*"
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^16.9.3":
@@ -6931,10 +6953,10 @@ wizard-icons@0.0.1-beta.0:
     react-modal "^3.9.1"
     styled-components "^4.3.2"
 
-wizard-ui@^0.3.0-beta.0:
-  version "0.3.0-beta.0"
-  resolved "https://registry.npmjs.org/wizard-ui/-/wizard-ui-0.3.0-beta.0.tgz#67ef9efdd1a2f8b85ad3d582eb28f512e05e8f08"
-  integrity sha512-GAta3FswnrXLwV/rG+Ty6ZW57jfgzj0HI02Vmowp/exYiMTBgZ/iFH7X6P83T34yqDRaVuAK2XGomoEMKqw24g==
+wizard-ui@^0.3.0-beta.1:
+  version "0.3.0-beta.1"
+  resolved "https://registry.npmjs.org/wizard-ui/-/wizard-ui-0.3.0-beta.1.tgz#048a835eb06becb9ced11c645f6586b521864f35"
+  integrity sha512-k+C3SEGllE4rUB8fLNrpu2CuWOVvx+L6n0wqssyzmy2VreK6SRUTjsQp7Ooh5gKVFspXH2m816222OZc7KeXyA==
   dependencies:
     "@types/rc-time-picker" "^3.4.1"
     "@types/rc-tree" "^1.11.3"

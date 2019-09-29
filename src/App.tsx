@@ -1,15 +1,22 @@
 import React from 'react';
-import { Badge, Icon, UsageBar } from 'wizard-ui';
 import 'wizard-ui/lib/style/index.scss';
+import SideBar from './components/Sidebar';
+import Content from './components/Content';
+import Topbar from './components/Topbar';
+import './style/index.scss';
 
-const App = () => {
+export default () => {
+  const [toggle, setToggle] = React.useState(false);
   return (
-    <React.Fragment>
-      <Badge count="关闭" status="default" />
-      <Icon type="os-search-role" />
-      <UsageBar percent={0.16} />
-    </React.Fragment>
+    <div className="Dashboard">
+      <aside className={`Dashboard__sidebar ${toggle ? 'collapsed' : ''}`}>
+        <div className="SideBar__logo">Logo</div>
+        <SideBar toggle={toggle}/>
+      </aside>
+      <section className="Dashboard__main">
+        <Topbar toggle={toggle} setToggle={setToggle}/>
+        <Content />
+      </section>
+    </div>
   )
 }
-
-export default App;

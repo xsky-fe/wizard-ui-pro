@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Icon } from 'wizard-ui';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Icon, Tooltip  } from 'wizard-ui';
 
 type Props = {
   toggle: boolean
@@ -28,7 +28,11 @@ export default (props: Props) => {
         </Nav>
         <Nav pullRight>
           <NavItem eventKey={2} href="#">
-            <Icon type="help"/>
+            <Tooltip
+              label={<Icon type="help" />}
+            >
+              使用文档
+            </Tooltip>
           </NavItem>
           <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
             <MenuItem eventKey={3.1}>用户管理</MenuItem>

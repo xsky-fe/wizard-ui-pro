@@ -1,6 +1,7 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Navigation, Icon } from 'wizard-ui';
+import './style.scss';
 
 const navs = {
   dashboard: {
@@ -12,18 +13,18 @@ const navs = {
     children: [
       {
         title: (
-          <Link to="/">
+          <NavLink to="/" exact activeClassName="Navigation__link--active">
             <Icon type="overview" />
             概览
-          </Link>
+          </NavLink>
         ),
       },
       {
         title: (
-          <Link to="/list">
+          <NavLink to="/list" exact activeClassName="Navigation__link--active">
             <Icon type="volume" />
             列表
-          </Link>
+          </NavLink>
         ),
       }
     ]

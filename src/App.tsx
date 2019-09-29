@@ -3,7 +3,7 @@ import 'wizard-ui/lib/style/index.scss';
 import SideBar from './components/Sidebar';
 import Content from './components/Content';
 import Topbar from './components/Topbar';
-import './style.scss';
+import './style/index.scss';
 
 export default () => {
   const [toggle, setToggle] = React.useState(false);

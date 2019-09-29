@@ -1,0 +1,32 @@
+@import '../../style/variables.scss';
+
+.Dashboard__sidebar {
+  .SideBar__logo {
+    height: 64px;
+    color: $white;
+    line-height: 64px;
+    text-align: center;
+  }
+  &.collapsed {
+    width: 50px;
+  }
+  min-height: 100vh;
+  .Navigation__item {
+    .icon {
+      padding-left: 20px;
+    }
+    .Navigation__link {
+      padding: 0;
+      &--active {
+        position: relative;
+      }
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

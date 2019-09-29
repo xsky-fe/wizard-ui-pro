@@ -45,6 +45,6 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "typescript": "^3.6.3",
-    "wizard-ui": "^0.3.0-beta.0"
+    "wizard-ui": "^0.3.0-beta.1"
   }
 }

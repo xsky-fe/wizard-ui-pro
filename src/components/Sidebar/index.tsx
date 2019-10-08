@@ -37,7 +37,6 @@ type Props = {
 }
 
 export default (props: Props) => {
-  console.log('props', props)
   return (
     <Navigation navGroups={navs} toggled={props.toggle}/>
   )

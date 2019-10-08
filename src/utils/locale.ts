@@ -2,7 +2,6 @@
 type Locale = 'en-US' | 'zh-CN';
 
 export function setLocale(locale: Locale) {
-  console.log('locale', locale);
   window.localStorage.setItem('lang', locale);
   window.location.reload();
 }

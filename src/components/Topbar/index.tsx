@@ -1,7 +1,8 @@
 import React from 'react';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Icon, Tooltip  } from 'wizard-ui';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Icon, Tooltip, InputGroup, FormControl  } from 'wizard-ui';
 import { FormattedMessage } from 'react-intl';
 import { setLocale, getLocale } from '../../utils/locale';
+import './style.scss';
 
 type Props = {
   toggle: boolean
@@ -33,13 +34,19 @@ export default (props: Props) => {
           </NavItem>
         </Nav>
         <Nav pullRight>
+          <li className="Search">
+            <InputGroup>
+              <FormControl placeholder="Search" />
+              <InputGroup.Addon>
+                <Icon type="search" />
+              </InputGroup.Addon>
+            </InputGroup>
+          </li>
           <NavDropdown eventKey={2} title={<FormattedMessage id="app.topbar.lang" />} id="basic-nav-dropdown-1">
             <MenuItem eventKey={2.1}>{locale === 'zh-CN' ? 'English' : '中文'}</MenuItem>
           </NavDropdown>
           <NavItem eventKey={3} href="#">
-            <Tooltip
-              label={<Icon type="help" />}
-            >
+            <Tooltip label={<Icon type="help" />}>
               <FormattedMessage id="app.topbar.doc" />
             </Tooltip>
           </NavItem>

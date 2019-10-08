@@ -14,7 +14,6 @@ export default () => {
     <LocaleProvider locale={locale}>
       <div className="Dashboard">
         <aside className={`Dashboard__sidebar ${toggle ? 'collapsed' : ''}`}>
-          <div className="SideBar__logo">Logo</div>
           <SideBar toggle={toggle}/>
         </aside>
         <section className="Dashboard__main">

@@ -34,7 +34,7 @@ export default function LocaleProvider(props: Props) {
   const myLocale = localeInfo[locale];
   return (
     <IntlProvider locale={myLocale.appLocale} messages={myLocale.appMessages}>
-      {React.Children.only(children)}
+      {children}
     </IntlProvider>
   );
 }

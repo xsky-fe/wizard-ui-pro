@@ -7030,10 +7030,10 @@ wizard-icons@0.0.1-beta.0:
     react-modal "^3.9.1"
     styled-components "^4.3.2"
 
-wizard-ui@^0.3.0-beta.1:
-  version "0.3.0-beta.1"
-  resolved "https://registry.npmjs.org/wizard-ui/-/wizard-ui-0.3.0-beta.1.tgz#048a835eb06becb9ced11c645f6586b521864f35"
-  integrity sha512-k+C3SEGllE4rUB8fLNrpu2CuWOVvx+L6n0wqssyzmy2VreK6SRUTjsQp7Ooh5gKVFspXH2m816222OZc7KeXyA==
+wizard-ui@^0.3.0-beta.2:
+  version "0.3.0-beta.2"
+  resolved "https://registry.npmjs.org/wizard-ui/-/wizard-ui-0.3.0-beta.2.tgz#05f2a459c543b41ef0e79189492e50692424a05e"
+  integrity sha512-VHI7A/EBCe9+dSYxqGtjq4SW1S3HP7Jp41CMVEGYXCyEXqodNU5kYr68fMjZywy5I+MRkmBceEEV8mGxOrm7lA==
   dependencies:
     "@types/rc-time-picker" "^3.4.1"
     "@types/rc-tree" "^1.11.3"

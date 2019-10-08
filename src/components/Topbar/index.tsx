@@ -1,10 +1,14 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Icon, Tooltip  } from 'wizard-ui';
+import { FormattedMessage } from 'react-intl';
+import { setLocale, getLocale } from '../../utils/locale';
 
 type Props = {
   toggle: boolean
   setToggle: Function
 }
+
+const locale = getLocale();
 
 export default (props: Props) => {
   const { toggle, setToggle } = props;
@@ -12,8 +16,10 @@ export default (props: Props) => {
   const handleSelect = (eventKey: any) => {
     switch(eventKey) {
       case 1:
-        console.log('hello')
         handleToggle();
+        break;
+      case 2.1:
+        setLocale(locale === 'zh-CN' ? 'en-US' : 'zh-CN');
         break;
       default:
     }
@@ -27,17 +33,20 @@ export default (props: Props) => {
           </NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={2} href="#">
+          <NavDropdown eventKey={2} title={<FormattedMessage id="app.topbar.lang" />} id="basic-nav-dropdown-1">
+            <MenuItem eventKey={2.1}>{locale === 'zh-CN' ? 'English' : '中文'}</MenuItem>
+          </NavDropdown>
+          <NavItem eventKey={3} href="#">
             <Tooltip
               label={<Icon type="help" />}
             >
-              使用文档
+              <FormattedMessage id="app.topbar.doc" />
             </Tooltip>
           </NavItem>
-          <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-            <MenuItem eventKey={3.1}>用户管理</MenuItem>
+          <NavDropdown eventKey={4} title={<FormattedMessage id="app.topbar.user" />} id="basic-nav-dropdown-2">
+            <MenuItem eventKey={4.1}><FormattedMessage id="app.topbar.usermanagement" /></MenuItem>
             <MenuItem divider />
-            <MenuItem eventKey={3.2}>退出登陆</MenuItem>
+            <MenuItem eventKey={4.2}><FormattedMessage id="app.topbar.logout" /></MenuItem>
           </NavDropdown>
         </Nav>
       </Navbar>

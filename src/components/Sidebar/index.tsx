@@ -1,21 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navigation, Icon } from 'wizard-ui';
+import { FormattedMessage } from 'react-intl';
 import './style.scss';
 
 const navs = {
   dashboard: {
-    title: '概览',
+    title: <FormattedMessage id="app.sidebar.overview" />,
     icon: 'overview',
   },
   list: {
-    title: '导航栏一',
+    title: <FormattedMessage id="app.sidebar.nav1" />,
     children: [
       {
         title: (
           <NavLink to="/" exact activeClassName="Navigation__link--active">
             <Icon type="overview" />
-            概览
+            <FormattedMessage id="app.sidebar.basic" />
           </NavLink>
         ),
       },
@@ -23,7 +24,7 @@ const navs = {
         title: (
           <NavLink to="/list" exact activeClassName="Navigation__link--active">
             <Icon type="volume" />
-            列表
+            <FormattedMessage id="app.sidebar.list" />
           </NavLink>
         ),
       }

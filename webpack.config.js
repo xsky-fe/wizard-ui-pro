@@ -14,8 +14,13 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          'sass-loader'
-        ]
+          {
+            options: {
+              precision: 8
+            },
+            loader: 'sass-loader'
+          }
+        ],
       },
       {
         test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,

@@ -3,14 +3,14 @@ a {
   color: $white;
 }
 .Dashboard {
+  background-color: $gray-lighter-3;
   .icon {
-    font-size: 18px;
     vertical-align: middle;
   }
   display: flex;
   &__sidebar {
     background-color: rgb(45, 52, 84);
-    transition: .5s;
+    transition: .3s;
     width: 256px;
   }
   &__main {
@@ -18,7 +18,7 @@ a {
     .Topbar {
       .navbar-nav {
         float: left;
-        margin-left: -10px;
+        margin-left: -8px;
       }
     }
   }

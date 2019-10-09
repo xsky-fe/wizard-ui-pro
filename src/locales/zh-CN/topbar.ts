@@ -1,4 +1,5 @@
 export default {
+  'app.topbar.search': '搜索',
   'app.topbar.lang': '语言',
   'app.topbar.doc': '使用文档',
   'app.topbar.user': '用户',

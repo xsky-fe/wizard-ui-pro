@@ -1,16 +1,15 @@
 @import '../../style/variables.scss';
 
 .Dashboard__sidebar {
+  min-height: 100vh;
   .SideBar__logo {
-    height: 64px;
     color: $white;
-    line-height: 64px;
+    line-height: 50px;
     text-align: center;
   }
   &.collapsed {
     width: 50px;
   }
-  min-height: 100vh;
   .Navigation__item {
     .icon {
       padding-left: 20px;

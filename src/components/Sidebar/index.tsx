@@ -10,57 +10,24 @@ type LinkTitleType = {
   icon: string,
   id: string
 }
-const LinkTitle = ({ path, icon, id }: LinkTitleType) => (
-  <NavLink to={path} exact activeClassName="Navigation__link--active">
-    <Icon type={icon} />
-    <FormattedMessage id={`app.sidebar.${id}`} />
-  </NavLink>
-)
+
+type Props = {
+  toggle: boolean
+}
 
 const navs = {
   dashboard: {
-    title: <LinkTitle path="/" icon="overview" id="overview" />,
-  },
-  list: {
-    title: <FormattedMessage id="app.sidebar.list" />,
-    children: [
-      {
-        title: <LinkTitle path="/list" icon="overview" id="list.basic"/>,
-      }
-    ]
-  },
-  detail: {
-    title: <FormattedMessage id="app.sidebar.detail" />,
-    children: [
-      {
-        title: <LinkTitle path="/detail-basic" icon="overview" id="detail.basic" />,
-      }
-    ]
-  },
-  form: {
-    title: <FormattedMessage id="app.sidebar.form" />,
-    children: [
-      {
-        title: <LinkTitle path="/form-basic" icon="overview" id="form.basic" />,
-      },
-      {
-        title: <LinkTitle path="/form-step" icon="overview" id="form.step" />,
-      }
-    ]
-  }
-}
-
-const navsToggled = {
-  dashboard: {
-    title: <FormattedMessage id="app.sidebar.overview" />,
+    title: <span><FormattedMessage id="app.sidebar.overview" /></span>,
     icon: 'overview',
+    component: (props: any) => <NavLink to="/" exact activeClassName="Navigation__link--active" {...props} />
   },
   list: {
     title: <FormattedMessage id="app.sidebar.list" />,
     children: [
       {
         title: <FormattedMessage id="app.sidebar.list.basic" />,
-        icon: 'overview',
+        icon: 'list',
+        component: (props: any) => <NavLink to="/list-basic" exact activeClassName="Navigation__link--active" {...props} />
       }
     ]
   },
@@ -69,7 +36,8 @@ const navsToggled = {
     children: [
       {
         title: <FormattedMessage id="app.sidebar.detail.basic" />,
-        icon: 'overview',
+        icon: 'standard-dn',
+        component: (props: any) => <NavLink to="/detail-basic" exact activeClassName="Navigation__link--active" {...props} />
       }
     ]
   },
@@ -78,23 +46,21 @@ const navsToggled = {
     children: [
       {
         title: <FormattedMessage id="app.sidebar.form.basic" />,
-        icon: 'overview',
+        icon: 'edit-square',
+        component: (props: any) => <NavLink to="/form-basic" exact activeClassName="Navigation__link--active" {...props} />
       },
       {
         title: <FormattedMessage id="app.sidebar.form.step" />,
-        icon: 'overview',
+        icon: 'history-2',
+        component: (props: any) => <NavLink to="/form-step" exact activeClassName="Navigation__link--active" {...props} />
       }
     ]
   }
 }
 
-type Props = {
-  toggle: boolean
-}
-
 export default (props: Props) => {
   const locale = getLocale();
   return (
-    <Navigation navGroups={props.toggle ? navsToggled : navs} toggled={props.toggle} logo={<div className="SideBar__logo">Logo</div>}/>
+    <Navigation navGroups={navs} toggled={props.toggle} logo={<div className="SideBar__logo">Logo</div>}/>
   )
 }

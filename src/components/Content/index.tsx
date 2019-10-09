@@ -2,6 +2,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Overview from '../../Layout/Overview';
+import BasicList from '../../Layout/List/Basic';
+import BasicDetail from '../../Layout/Detail/Basic';
 import './style.scss';
 
 const ROUTE_MAP = [
@@ -12,14 +14,14 @@ const ROUTE_MAP = [
     component: () => <Overview />
   },
   {
-    path: '/list',
-    name: 'List',
-    component: () => <div>list</div>
+    path: '/list-basic',
+    name: 'Basic List',
+    component: () => <BasicList/>
   },
   {
     path: '/detail-basic',
     name: 'Basic Detail',
-    component: () => <div>Basic Detail</div>
+    component: () => <BasicDetail />
   },
   {
     path: '/form-basic',

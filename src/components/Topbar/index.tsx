@@ -42,8 +42,8 @@ export default (props: Props) => {
               </InputGroup.Addon>
             </InputGroup>
           </li>
-          <NavDropdown eventKey={2} title={<FormattedMessage id="app.topbar.lang" />} id="basic-nav-dropdown-1">
-            <MenuItem eventKey={2.1}>{locale === 'zh-CN' ? 'English' : '中文'}</MenuItem>
+          <NavDropdown eventKey={2} title={<Icon type="domain" />} id="basic-nav-dropdown-1" noCaret>
+            <MenuItem eventKey={2.1}>{locale === 'zh-CN' ? 'English' : '简体中文'}</MenuItem>
           </NavDropdown>
           <NavItem eventKey={3} href="#">
             <Tooltip label={<Icon type="help" />}>

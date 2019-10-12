@@ -1,4 +1,6 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+var ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: './src/index',
@@ -27,7 +29,8 @@ module.exports = {
         use: ['file-loader']
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/, use: 'url-loader?limit=100000' }
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/, use: 'url-loader?limit=100000'
+      }
     ]
   },
   resolve: {
@@ -39,14 +42,11 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: __dirname + '/template/index.html',
+    }),
+    new ManifestPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
-    // You can remove this if you don't use Moment.js:
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
-  devServer: {
-    contentBase: './dist',
-    hot: true
-  },
-  devtool: 'source-map'
 }

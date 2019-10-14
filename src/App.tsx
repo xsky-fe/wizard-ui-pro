@@ -1,5 +1,5 @@
 import React from 'react';
-import 'wizard-ui/lib/style/index.scss';
+import 'wizard-ui/lib/style/index.css';
 import SideBar from './components/Sidebar';
 import Content from './components/Content';
 import Topbar from './components/Topbar';

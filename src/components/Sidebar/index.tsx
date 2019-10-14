@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Navigation, Icon } from 'wizard-ui';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import { Navigation } from 'wizard-ui';
+import { FormattedMessage } from 'react-intl';
 import { getLocale } from '../../utils/locale';
 import './style.scss';
 

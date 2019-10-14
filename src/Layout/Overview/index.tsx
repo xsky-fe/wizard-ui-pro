@@ -4,16 +4,16 @@ import { Panel, Row, Col } from 'wizard-ui';
 export default () => {
   return (
     <>
-      <Panel>i am panel </Panel>
+      <Panel collapsible header="监控">监控</Panel>
       <Row>
         <Col md={8}>
-          <Panel>1</Panel>
+          <Panel header="面板一">内容一</Panel>
         </Col>
         <Col md={8}>
-          <Panel>1</Panel>
+          <Panel header="面板二">内容二</Panel>
         </Col>
         <Col md={8}>
-          <Panel>1</Panel>
+          <Panel header="面板三">内容三</Panel>
         </Col>
       </Row>
     </>

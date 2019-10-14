@@ -2,7 +2,5 @@
   "globalDependencies": {
     "react-intl": "registry:dt/react-intl#2.2.1+20170323145511"
   },
-  "globalDevDependencies": {
-    "webpack-merge": "registry:dt/webpack-merge#0.0.0+20161121205806"
-  }
+  "globalDevDependencies": {}
 }

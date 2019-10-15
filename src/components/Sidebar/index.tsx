@@ -68,6 +68,7 @@ export default (props: Props) => {
     }
   });
   return (
+    // @ts-ignore
     <Navigation navGroups={navs} expandedKeys={expandedKeys} toggled={props.toggle} logo={<div className="SideBar__logo">Logo</div>}/>
   )
 }

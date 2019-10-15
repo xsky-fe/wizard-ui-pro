@@ -1,6 +1,9 @@
 {
   "globalDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20161016142654",
     "react-intl": "registry:dt/react-intl#2.2.1+20170323145511"
   },
-  "globalDevDependencies": {}
+  "globalDevDependencies": {
+    "webpack-merge": "registry:dt/webpack-merge#0.0.0+20161121205806"
+  }
 }

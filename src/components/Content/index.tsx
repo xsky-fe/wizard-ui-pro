@@ -21,7 +21,7 @@ const ROUTE_MAP = [
   {
     path: '/detail-basic',
     name: 'Basic Detail',
-    component: () => <BasicDetail />
+    component: () => <div className="DetailPage"><BasicDetail /></div>
   },
   {
     path: '/form-basic',

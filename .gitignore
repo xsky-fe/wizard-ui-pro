@@ -5,3 +5,6 @@ dist
 
 # analyze
 stats.json
+
+# yarn log
+yarn-error.log

@@ -13,7 +13,7 @@ const STATUS = [
   'danger',
 ]
 
-export default Mock.mock('/basic', '', {
+export default Mock.mock('/basic', 'get', {
   book: {
     'id|+1': 1,
     name:'@name',

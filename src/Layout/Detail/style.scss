@@ -1,0 +1,18 @@
+@import '../../style/variables.scss';
+
+.DetailPage {
+  .icon {
+    font-size: 18px;
+    margin-right: 10px;
+    color: $gray-darker-2;
+  }
+  .breadcrumb {
+    background: none;
+  }
+  .panel-default {
+    border-color: transparent;
+  }
+  .Tabs .panel-body {
+    height: calc(100vh - 172px);
+  }
+}

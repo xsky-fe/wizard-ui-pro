@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
@@ -12,42 +11,6 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         include: path.resolve(__dirname, 'src'),
         use: ['babel-loader', 'awesome-typescript-loader']
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              sourceMap: true,
-            },
-          },
-        ],
-        sideEffects: true,
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2,
-              sourceMap: true,
-            },
-          },
-          {
-            options: {
-              precision: 8
-            },
-            loader: 'sass-loader'
-          }
-        ],
-        sideEffects: true,
       },
       {
         test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
@@ -61,12 +24,6 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
   },
-  output: {
-    path: __dirname + '/dist',
-    publicPath: './',
-    pathinfo: false,
-    filename: 'bundle.js'
-  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
@@ -74,10 +31,5 @@ module.exports = {
     }),
     new ManifestPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash:8].css',
-      chunkFilename: '[name].[contenthash:8].chunk.css',
-      ignoreOrder: false,
-    }),
   ],
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navigation } from 'wizard-ui';
 import { FormattedMessage } from 'react-intl';
-import { getLocale } from '../../utils/locale';
 import './style.scss';
 
 type LinkTitleType = {
@@ -58,9 +57,17 @@ const navs = {
   }
 }
 
+const keys = Object.keys(navs);
+
 export default (props: Props) => {
-  const locale = getLocale();
+  const locationHash = window.location.hash;
+  let expandedKeys: string[] = [];
+  keys.forEach(key => {
+    if (locationHash.includes(key)) {
+      expandedKeys.push(key);
+    }
+  });
   return (
-    <Navigation navGroups={navs} toggled={props.toggle} logo={<div className="SideBar__logo">Logo</div>}/>
+    <Navigation navGroups={navs} expandedKeys={expandedKeys} toggled={props.toggle} logo={<div className="SideBar__logo">Logo</div>}/>
   )
 }

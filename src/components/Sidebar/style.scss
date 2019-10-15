@@ -1,6 +1,9 @@
 @import '../../style/variables.scss';
 
 .Dashboard__sidebar {
+  a {
+    color: $white;
+  }
   min-height: 100vh;
   .SideBar__logo {
     color: $white;

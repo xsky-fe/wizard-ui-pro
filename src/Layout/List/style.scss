@@ -1,0 +1,60 @@
+@import '../../style/variables.scss';
+
+.InfoBar {
+  margin-bottom: 5px;
+  padding: 8px 0 18px;
+  font-size: 14px;
+  color: $gray-darker-3;
+  > span {
+    padding: 5px;
+  }
+  .icon {
+    font-size: 18px;
+  }
+  .Tooltip {
+    .icon {
+      color: $light-steel-blue-normal;
+    }
+  }
+}
+.table {
+  table {
+    width: 100%;
+  }
+  th {
+    color: $gray-medium-6;
+    position: relative;
+    padding: 6px 8px 8px;
+    white-space: nowrap;
+    font-weight: 700;
+    line-height: 24px;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 1px;
+      height: 3px;
+      background-color: $gray-medium-2;
+    }
+  }
+   td {
+      border-top: 0;
+      color: $gray-darker-3;
+      vertical-align: middle;
+      border-bottom: 1px solid $gray-medium-2;
+      padding: 11px 8px;
+      word-break: break-all;
+      white-space: nowrap;
+   }
+}
+
+.List__panel {
+  height: calc(100vh - 130px);
+  margin-bottom: 0;
+  overflow-y: scroll;
+}
+.Toolbar {
+  margin-bottom: 8px;
+}

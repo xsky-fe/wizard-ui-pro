@@ -1,7 +1,6 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -60,7 +59,6 @@ module.exports = merge(common, {
     new MomentLocalesPlugin({
       localesToKeep: ['es-us', 'ru'],
     }),
-    new TerserPlugin(),
     new OptimizeCSSAssetsPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash:8].css',

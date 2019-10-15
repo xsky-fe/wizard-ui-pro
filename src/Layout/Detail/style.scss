@@ -13,6 +13,6 @@
     border-color: transparent;
   }
   .Tabs .panel-body {
-    height: calc(100vh - 172px);
+    min-height: calc(100vh - 172px);
   }
 }

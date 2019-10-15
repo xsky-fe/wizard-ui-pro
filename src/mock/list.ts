@@ -1,4 +1,5 @@
 import Mock from 'mockjs';
+import basicData from './basic';
 
 Mock.Random.name();
 Mock.Random.word();
@@ -13,10 +14,12 @@ const STATUS = [
 ]
 
 export default Mock.mock({
-  'id|+1': 1,
-  name: '@name',
-  description: '@word',
-  'status|1': STATUS,
-  'action_status|1': STATUS,
-  update_time: '@datetime'
+  'list|8': [{
+    'id|+1': 1,
+    name: '@name',
+    description: '@word',
+    'status|1': STATUS,
+    'action_status|1': STATUS,
+    update_time: '@datetime'
+  }]
 });

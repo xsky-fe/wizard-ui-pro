@@ -1,8 +1,5 @@
 import Mock from 'mockjs';
 
-Mock.Random.name();
-Mock.Random.word();
-Mock.Random.datetime();
 const STATUS = [
   'default',
   'success',

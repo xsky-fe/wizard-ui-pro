@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Icon, Loader } from 'wizard-ui';
+import { Badge, Icon } from 'wizard-ui';
 import { FormattedMessage } from 'react-intl';
 import './style.scss';
 

@@ -11,4 +11,7 @@ export default {
   'app.desc': '描述',
   'app.status': '状态',
   'app.update.time': '更新时间',
+  'app.login': '登录',
+  'app.usename': '用户名',
+  'app.password': '密码',
 }

@@ -5,26 +5,33 @@ import Field from '../../components/Field';
 import { Well } from 'wizard-ui';
 import { Props } from './type';
 import { defaultUser } from './constants';
+//@ts-ignore
+import { FormattedMessage, useIntl } from 'react-intl';
 
 export default (props: Props) => {
+  const intl = useIntl();
   const { isSubmitting, getFieldProps, ...rest } = props;
+  const userPlaceholder = intl.formatMessage({ id: 'app.name.placeholder' });
+  const passwordPlaceholder = intl.formatMessage({ id: 'app.password.placeholder' });
+  const submitText = intl.formatMessage({ id: 'app.login' });
+
   return (
-    <>
+    <div>
       <Well>
-        <p>用户：{defaultUser.name}</p>
-        <p>密码：{defaultUser.password}</p>
+        <p><FormattedMessage id="app.usename"/>：{defaultUser.name}</p>
+        <p><FormattedMessage id="app.password" />：{defaultUser.password}</p>
       </Well>
       <Form {...rest}>
-        <Field labelCol={0} placeholder="请填写名称" {...getFieldProps('name')} />
+        <Field labelCol={0} placeholder={userPlaceholder} {...getFieldProps('name')} />
         <Field
           labelCol={0}
-          label="密码："
           type="password"
-          placeholder="请填写密码"
+          placeholder={passwordPlaceholder}
           {...getFieldProps('password')}
         />
-        <FormFooter xsOffset={0} disabled={isSubmitting} submitText="登录" block />
+        <FormFooter xsOffset={0} disabled={isSubmitting} submitText={submitText} block />
       </Form>
-    </>
+    </div>
   );
 };
+

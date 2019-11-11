@@ -11,4 +11,7 @@ export default {
   'app.desc': 'Description',
   'app.status': 'Status',
   'app.update.time': 'Update time',
+  'app.login': 'Login',
+  'app.usename': 'Username',
+  'app.password': 'Password',
 }

@@ -6,6 +6,11 @@ import * as Yup from 'yup';
 import { Values } from './type';
 import { setCookie } from '../../utils/cookie';
 import { defaultUser } from './constants';
+import { FormattedMessage } from 'react-intl';
+
+const epmtyUseranme: any = <FormattedMessage id="app.name.validate"/>;
+const epmtyPassword: any = <FormattedMessage id="app.password.validate" />;
+const errorLogin: any = <FormattedMessage id="app.login.validate" />;
 
 export default () => {
   let history = useHistory();
@@ -15,15 +20,15 @@ export default () => {
     password: '',
   };
   const validationSchema = Yup.object({
-    name: Yup.string().required('用户名不能为空！'),
-    password: Yup.string().required('密码不能为空！'),
+    name: Yup.string().required(epmtyUseranme),
+    password: Yup.string().required(epmtyPassword),
   });
   const onSubmit = (values: Values) => {
     if (defaultUser.name === values.name && defaultUser.password === values.password) {
       setCookie(values);
       history.push('/');
     } else {
-      setAsyncError('用户或者密码不正确！');
+      setAsyncError(errorLogin);
     }
   };
   const formik = useFormik({

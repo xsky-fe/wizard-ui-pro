@@ -2,6 +2,8 @@ import React from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Icon, Tooltip, InputGroup, FormControl  } from 'wizard-ui';
 import { FormattedMessage } from 'react-intl';
 import { setLocale, getLocale } from '../../utils/locale';
+import { useHistory } from 'react-router-dom';
+import { clearCookie, getCookie } from '../../utils/cookie';
 import './style.scss';
 
 type Props = {
@@ -13,6 +15,8 @@ const locale = getLocale();
 
 export default (props: Props) => {
   const { toggle, setToggle } = props;
+  const history = useHistory();
+  const cookie = getCookie();
   const handleToggle = () => setToggle(!toggle);
   const handleSelect = (eventKey: any) => {
     switch(eventKey) {
@@ -21,6 +25,10 @@ export default (props: Props) => {
         break;
       case 2.1:
         setLocale(locale === 'zh-CN' ? 'en-US' : 'zh-CN');
+        break;
+      case 4.2:
+        clearCookie();
+        history.push('/login');
         break;
       default:
     }
@@ -50,7 +58,7 @@ export default (props: Props) => {
               <FormattedMessage id="app.topbar.doc" />
             </Tooltip>
           </NavItem>
-          <NavDropdown eventKey={4} title={<FormattedMessage id="app.topbar.user" />} id="basic-nav-dropdown-2">
+          <NavDropdown eventKey={4} title={cookie.name} id="basic-nav-dropdown-2">
             <MenuItem eventKey={4.1}><FormattedMessage id="app.topbar.usermanagement" /></MenuItem>
             <MenuItem divider />
             <MenuItem eventKey={4.2}><FormattedMessage id="app.topbar.logout" /></MenuItem>

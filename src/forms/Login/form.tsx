@@ -5,7 +5,6 @@ import Field from '../../components/Field';
 import { Well } from 'wizard-ui';
 import { Props } from './type';
 import { defaultUser } from './constants';
-//@ts-ignore
 import { FormattedMessage, useIntl } from 'react-intl';
 
 export default (props: Props) => {

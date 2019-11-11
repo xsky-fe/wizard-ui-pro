@@ -59,7 +59,7 @@
     "rc-table": "^6.8.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-intl": "^3.3.2",
+    "react-intl": "^3.5.0",
     "react-router-dom": "^5.0.1",
     "typescript": "^3.6.3",
     "wizard-ui": "0.4.0-beta.6",

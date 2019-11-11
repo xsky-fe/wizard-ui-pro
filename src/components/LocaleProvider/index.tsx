@@ -9,7 +9,7 @@ type Locale = 'zh-CN' | 'en-US';
 type Info = {
   [key in Locale]: {
     appLocale: 'en' | 'zh',
-    appMessages: object
+    appMessages: any
   };
 };
 
